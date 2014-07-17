@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "TestOneViewController.h"
 
 @implementation AppDelegate
 
@@ -15,6 +16,13 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    
+    
+    TestOneViewController *oneView = [[TestOneViewController alloc] initWithNibName:@"TestOneViewController" bundle:nil];
+    _uiNavigation1 = [[UINavigationController alloc] initWithRootViewController:oneView];
+    
+    self.window.rootViewController = _uiNavigation1;
+    
     [self.window makeKeyAndVisible];
     return YES;
 }
